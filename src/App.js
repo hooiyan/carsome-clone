@@ -4,12 +4,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import HeaderMenu from './components/HeaderMenu';
+import DesktopHeader from './components/header/DesktopHeader';
 
 function App() {
   return (
     <Box h='100vh' w='100%'>
-      <HeaderMenu />
+      <DesktopHeader />
       {/* <Swiper
         slidesPerView={1}
         spaceBetween={30}

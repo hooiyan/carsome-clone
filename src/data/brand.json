@@ -1,0 +1,90 @@
+[
+  {
+    "id": 0,
+    "type": "Audi"
+  },
+  {
+    "id": 1,
+    "type": "BMW"
+  },
+  {
+    "id": 2,
+    "type": "Ford"
+  },
+  {
+    "id": 3,
+    "type": "Honda"
+  },
+  {
+    "id": 4,
+    "type": "Hyundai"
+  },
+  {
+    "id": 5,
+    "type": "Inokom"
+  },
+  {
+    "id": 6,
+    "type": "Isuzu"
+  },
+  {
+    "id": 7,
+    "type": "Kia"
+  },
+  {
+    "id": 8,
+    "type": "Lexus"
+  },
+  {
+    "id": 9,
+    "type": "Mazda"
+  },
+  {
+    "id": 10,
+    "type": "Mercedes-Benz"
+  },
+  {
+    "id": 11,
+    "type": "Mini"
+  },
+  {
+    "id": 12,
+    "type": "Mitsubishi"
+  },
+  {
+    "id": 13,
+    "type": "Nissan"
+  },
+  {
+    "id": 14,
+    "type": "Perodua"
+  },
+  {
+    "id": 15,
+    "type": "Peugeot"
+  },
+  {
+    "id": 16,
+    "type": "Proton"
+  },
+  {
+    "id": 17,
+    "type": "Subaru"
+  },
+  {
+    "id": 18,
+    "type": "Suzuki"
+  },
+  {
+    "id": 19,
+    "type": "Toyota"
+  },
+  {
+    "id": 20,
+    "type": "Volkswagen"
+  },
+  {
+    "id": 21,
+    "type": "Volvo"
+  }
+]
