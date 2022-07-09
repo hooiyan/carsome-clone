@@ -11,7 +11,7 @@ import React from 'react';
 
 function MobileDrawerAccordionItem({ children, icon, title }) {
   return (
-    <AccordionItem borderWidth={0}>
+    <AccordionItem borderWidth={0} _last={{ borderBottomWidth: 1, pb: 1 }}>
       <h2>
         <AccordionButton pr={8} _hover={{ bgColor: 'gray.50' }}>
           <HStack flex='1' textAlign='left' px={2}>
@@ -20,10 +20,10 @@ function MobileDrawerAccordionItem({ children, icon, title }) {
               {title}
             </Text>
           </HStack>
-          <AccordionIcon />
+          <AccordionIcon color='gray.500' />
         </AccordionButton>
       </h2>
-      <AccordionPanel borderWidth={0} pb={4} pl={12} pr={8}>
+      <AccordionPanel borderWidth={0} pb={2} pl={12} pr={8}>
         {children}
       </AccordionPanel>
     </AccordionItem>

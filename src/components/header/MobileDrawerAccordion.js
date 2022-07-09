@@ -1,32 +1,63 @@
+import { Accordion, Flex, Link } from '@chakra-ui/react';
 import React from 'react';
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Box,
-} from '@chakra-ui/react';
-import MobileDrawerAccordionItem from './MobileDrawerAccordionItem';
 import { AiFillCar } from 'react-icons/ai';
 import { FaHandHoldingUsd } from 'react-icons/fa';
-import { RiMoneyDollarCircleFill, RiBuildingFill } from 'react-icons/ri';
-import { MdComment } from 'react-icons/md';
 import { IoPerson } from 'react-icons/io5';
+import { MdComment } from 'react-icons/md';
+import { RiBuildingFill, RiMoneyDollarCircleFill } from 'react-icons/ri';
+import { ABOUT, DEALERS, FINANCING } from '../../constants/menu';
+import CarBrands from '../../data/brand.json';
+import Column from './Column';
+import HeaderLink from './HeaderLink';
+import MobileDrawerAccordionItem from './MobileDrawerAccordionItem';
 import MobileDrawerPlainMenu from './MobileDrawerPlainMenu';
+import RecommendButton from './RecommendButton';
+
+function NestedAccordionItem({ items }) {
+  return (
+    <Flex flexDir='column'>
+      {items.map((item) => {
+        return (
+          <Link
+            key={item}
+            py={2}
+            textTransform='capitalize'
+            _hover={{ textDecor: 'none' }}
+          >
+            {item}
+          </Link>
+        );
+      })}
+    </Flex>
+  );
+}
 
 function MobileDrawerAccordion() {
   return (
     <Accordion allowMultiple borderWidth={0}>
-      <MobileDrawerAccordionItem icon={AiFillCar} title='Buy Car' />
+      <MobileDrawerAccordionItem icon={AiFillCar} title='Buy Car'>
+        <HeaderLink isDrawer />
+        <Flex gap={6} mt={3}>
+          <Column isDrawer data={CarBrands.slice(0, 11)} />
+          <Column isDrawer data={CarBrands.slice(11, 22)} />
+        </Flex>
+        <RecommendButton isDrawer />
+      </MobileDrawerAccordionItem>
       <MobileDrawerPlainMenu icon={FaHandHoldingUsd} title='Sell Car' />
       <MobileDrawerAccordionItem
         icon={RiMoneyDollarCircleFill}
         title='Financing'
-      />
+      >
+        <NestedAccordionItem items={FINANCING} />
+      </MobileDrawerAccordionItem>
       <MobileDrawerPlainMenu icon={MdComment} title='FAQ' />
-      <MobileDrawerAccordionItem icon={RiBuildingFill} title='About Carsome' />
-      <MobileDrawerAccordionItem icon={IoPerson} title='Dealers' />
+      <MobileDrawerAccordionItem icon={RiBuildingFill} title='About Carsome'>
+        <NestedAccordionItem items={ABOUT} />
+      </MobileDrawerAccordionItem>
+      <MobileDrawerAccordionItem icon={IoPerson} title='Dealers'>
+        <NestedAccordionItem items={DEALERS} />
+        <Flex flexDir='column'></Flex>
+      </MobileDrawerAccordionItem>
     </Accordion>
   );
 }

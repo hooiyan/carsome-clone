@@ -1,10 +1,10 @@
-import { Flex, MenuItem, Text } from '@chakra-ui/react';
+import { Flex, MenuItem } from '@chakra-ui/react';
 import React from 'react';
-import DesktopHeaderRight from './DesktopHeaderRight';
 import DesktopHeaderDropdown from './DesktopHeaderDropdown';
-import Logo from './Logo';
-import DesktopHeaderPlainMenu from './DesktopHeaderPlainMenu';
 import DesktopHeaderDropdownSpecial from './DesktopHeaderDropdownSpecial';
+import DesktopHeaderPlainMenu from './DesktopHeaderPlainMenu';
+import DesktopHeaderRight from './DesktopHeaderRight';
+import Logo from './Logo';
 
 function DesktopHeader() {
   return (

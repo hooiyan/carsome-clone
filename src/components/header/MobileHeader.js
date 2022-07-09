@@ -1,8 +1,8 @@
 import { Flex, HStack } from '@chakra-ui/react';
 import React from 'react';
 import Logo from './Logo';
-import MobileHeaderRight from './MobileHeaderRight';
 import MobileDrawer from './MobileDrawer';
+import MobileHeaderRight from './MobileHeaderRight';
 
 function MobileHeader() {
   return (

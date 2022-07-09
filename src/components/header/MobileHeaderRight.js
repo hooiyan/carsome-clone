@@ -1,6 +1,5 @@
-import React from 'react';
 import { HStack, Icon, Link } from '@chakra-ui/react';
-import { Link as RouterLink } from 'react-router-dom';
+import React from 'react';
 import { IoPersonCircle } from 'react-icons/io5';
 
 function MobileHeaderRight() {

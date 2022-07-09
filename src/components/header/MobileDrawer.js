@@ -1,22 +1,18 @@
-import React from 'react';
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
+  DrawerCloseButton,
+  DrawerContent,
   DrawerHeader,
   DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  useDisclosure,
   Icon,
-  Box,
-  HStack,
-  Text,
+  useDisclosure
 } from '@chakra-ui/react';
+import React from 'react';
 import { FiMenu } from 'react-icons/fi';
+import HotlineNumber from './HotlineNumber';
 import Logo from './Logo';
 import MobileDrawerAccordion from './MobileDrawerAccordion';
-import HotlineNumber from './HotlineNumber';
 
 function MobileDrawer() {
   const { isOpen, onOpen, onClose } = useDisclosure();
