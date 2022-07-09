@@ -3,8 +3,13 @@ import React from 'react';
 
 function Logo() {
   return (
-    <Text fontSize='xl' fontWeight='bold' textTransform='uppercase'>
-      BikeSome
+    <Text
+      fontSize={['md', 'md', 'md', 'lg', 'xl']}
+      fontWeight='bold'
+      pt='0.5'
+      textTransform='uppercase'
+    >
+      Carsome
     </Text>
   );
 }

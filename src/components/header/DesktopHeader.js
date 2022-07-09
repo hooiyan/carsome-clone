@@ -1,10 +1,10 @@
 import { Flex, MenuItem, Text } from '@chakra-ui/react';
 import React from 'react';
 import DesktopHeaderRight from './DesktopHeaderRight';
-import DropdownMenu from './DropdownMenu';
+import DesktopHeaderDropdown from './DesktopHeaderDropdown';
 import Logo from './Logo';
-import PlainMenu from './PlainMenu';
-import SpecialDropdownMenu from './SpecialDropdownMenu';
+import DesktopHeaderPlainMenu from './DesktopHeaderPlainMenu';
+import DesktopHeaderDropdownSpecial from './DesktopHeaderDropdownSpecial';
 
 function DesktopHeader() {
   return (
@@ -20,14 +20,14 @@ function DesktopHeader() {
       <Flex alignItems='center' gap={10} pl={10} w='90%'>
         <Logo />
         <Flex as='nav' gap={4}>
-          <SpecialDropdownMenu />
-          <PlainMenu title='Sell Car' />
-          <DropdownMenu title='Financing'>
+          <DesktopHeaderDropdownSpecial />
+          <DesktopHeaderPlainMenu title='Sell Car' />
+          <DesktopHeaderDropdown title='Financing'>
             <MenuItem>Car Loan</MenuItem>
             <MenuItem>Car Insurance</MenuItem>
-          </DropdownMenu>
-          <PlainMenu title='FAQ' />
-          <DropdownMenu title='About Carsome'>
+          </DesktopHeaderDropdown>
+          <DesktopHeaderPlainMenu title='FAQ' />
+          <DesktopHeaderDropdown title='About Carsome'>
             <MenuItem>Our Story</MenuItem>
             <MenuItem>Carsome Certified Lab</MenuItem>
             <MenuItem>Buying from Carsome</MenuItem>
@@ -37,11 +37,11 @@ function DesktopHeader() {
             <MenuItem>News</MenuItem>
             <MenuItem>Contact Us</MenuItem>
             <MenuItem>Locate Us</MenuItem>
-          </DropdownMenu>
-          <DropdownMenu title='Dealers'>
+          </DesktopHeaderDropdown>
+          <DesktopHeaderDropdown title='Dealers'>
             <MenuItem>Dealer Sign Up</MenuItem>
             <MenuItem>Dealer Login</MenuItem>
-          </DropdownMenu>
+          </DesktopHeaderDropdown>
         </Flex>
       </Flex>
       <DesktopHeaderRight />

@@ -5,11 +5,13 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import DesktopHeader from './components/header/DesktopHeader';
+import MobileHeader from './components/header/MobileHeader';
 
 function App() {
   return (
     <Box h='100vh' w='100%'>
       <DesktopHeader />
+      <MobileHeader />
       {/* <Swiper
         slidesPerView={1}
         spaceBetween={30}

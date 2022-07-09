@@ -32,7 +32,7 @@ function Column({ data }) {
   );
 }
 
-function SpecialDropdownMenu() {
+function DesktopHeaderDropdownSpecial() {
   return (
     <Popover
       trigger='hover'
@@ -40,6 +40,7 @@ function SpecialDropdownMenu() {
       openDelay={0}
       gutter={0}
       matchWidth={false}
+      placement='bottom-start'
     >
       <PopoverTrigger>
         <Button
@@ -90,4 +91,4 @@ function SpecialDropdownMenu() {
   );
 }
 
-export default SpecialDropdownMenu;
+export default DesktopHeaderDropdownSpecial;

@@ -8,13 +8,13 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 
-function DropdownMenu({ children, title }) {
+function DesktopHeaderDropdown({ children, title }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Menu
-      isOpen={isOpen}
       gutter={0}
+      isOpen={isOpen}
       modifiers={[
         {
           name: 'arrow',
@@ -53,4 +53,4 @@ function DropdownMenu({ children, title }) {
   );
 }
 
-export default DropdownMenu;
+export default DesktopHeaderDropdown;

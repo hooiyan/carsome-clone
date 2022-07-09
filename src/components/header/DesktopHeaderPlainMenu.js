@@ -1,7 +1,7 @@
 import { Link } from '@chakra-ui/react';
 import React from 'react';
 
-function PlainMenu({ title }) {
+function DesktopHeaderPlainMenu({ title }) {
   return (
     <Link
       // as={RouterLink}
@@ -19,4 +19,4 @@ function PlainMenu({ title }) {
   );
 }
 
-export default PlainMenu;
+export default DesktopHeaderPlainMenu;
