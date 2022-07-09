@@ -5,7 +5,7 @@ import { FaHandHoldingUsd } from 'react-icons/fa';
 import { IoPerson } from 'react-icons/io5';
 import { MdComment } from 'react-icons/md';
 import { RiBuildingFill, RiMoneyDollarCircleFill } from 'react-icons/ri';
-import { ABOUT, DEALERS, FINANCING } from '../../constants/menu';
+import { MENU_ABOUT, MENU_DEALERS, MENU_FINANCING } from '../../constants/menu';
 import CarBrands from '../../data/brand.json';
 import Column from './Column';
 import HeaderLink from './HeaderLink';
@@ -19,12 +19,12 @@ function NestedAccordionItem({ items }) {
       {items.map((item) => {
         return (
           <Link
-            key={item}
+            key={item.id}
             py={2}
             textTransform='capitalize'
             _hover={{ textDecor: 'none' }}
           >
-            {item}
+            {item.name}
           </Link>
         );
       })}
@@ -48,14 +48,14 @@ function MobileDrawerAccordion() {
         icon={RiMoneyDollarCircleFill}
         title='Financing'
       >
-        <NestedAccordionItem items={FINANCING} />
+        <NestedAccordionItem items={MENU_FINANCING} />
       </MobileDrawerAccordionItem>
       <MobileDrawerPlainMenu icon={MdComment} title='FAQ' />
       <MobileDrawerAccordionItem icon={RiBuildingFill} title='About Carsome'>
-        <NestedAccordionItem items={ABOUT} />
+        <NestedAccordionItem items={MENU_ABOUT} />
       </MobileDrawerAccordionItem>
       <MobileDrawerAccordionItem icon={IoPerson} title='Dealers'>
-        <NestedAccordionItem items={DEALERS} />
+        <NestedAccordionItem items={MENU_DEALERS} />
         <Flex flexDir='column'></Flex>
       </MobileDrawerAccordionItem>
     </Accordion>

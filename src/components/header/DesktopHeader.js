@@ -1,5 +1,6 @@
 import { Flex, MenuItem } from '@chakra-ui/react';
 import React from 'react';
+import { MENU_ABOUT, MENU_DEALERS, MENU_FINANCING } from '../../constants/menu';
 import DesktopHeaderDropdown from './DesktopHeaderDropdown';
 import DesktopHeaderDropdownSpecial from './DesktopHeaderDropdownSpecial';
 import DesktopHeaderPlainMenu from './DesktopHeaderPlainMenu';
@@ -23,24 +24,32 @@ function DesktopHeader() {
           <DesktopHeaderDropdownSpecial />
           <DesktopHeaderPlainMenu title='Sell Car' />
           <DesktopHeaderDropdown title='Financing'>
-            <MenuItem>Car Loan</MenuItem>
-            <MenuItem>Car Insurance</MenuItem>
+            {MENU_FINANCING.map((menu) => {
+              return (
+                <MenuItem key={menu.id} textTransform='capitalize'>
+                  {menu.name}
+                </MenuItem>
+              );
+            })}
           </DesktopHeaderDropdown>
           <DesktopHeaderPlainMenu title='FAQ' />
           <DesktopHeaderDropdown title='About Carsome'>
-            <MenuItem>Our Story</MenuItem>
-            <MenuItem>Carsome Certified Lab</MenuItem>
-            <MenuItem>Buying from Carsome</MenuItem>
-            <MenuItem>Quality Assured Cars</MenuItem>
-            <MenuItem>Carsome Capital</MenuItem>
-            <MenuItem>Articles</MenuItem>
-            <MenuItem>News</MenuItem>
-            <MenuItem>Contact Us</MenuItem>
-            <MenuItem>Locate Us</MenuItem>
+            {MENU_ABOUT.map((menu) => {
+              return (
+                <MenuItem key={menu.id} textTransform='capitalize'>
+                  {menu.name}
+                </MenuItem>
+              );
+            })}
           </DesktopHeaderDropdown>
           <DesktopHeaderDropdown title='Dealers'>
-            <MenuItem>Dealer Sign Up</MenuItem>
-            <MenuItem>Dealer Login</MenuItem>
+            {MENU_DEALERS.map((menu) => {
+              return (
+                <MenuItem key={menu.id} textTransform='capitalize'>
+                  {menu.name}
+                </MenuItem>
+              );
+            })}
           </DesktopHeaderDropdown>
         </Flex>
       </Flex>
