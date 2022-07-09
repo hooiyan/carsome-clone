@@ -4,7 +4,6 @@ import {
   Menu,
   MenuButton,
   MenuList,
-  PopoverArrow,
   useDisclosure,
 } from '@chakra-ui/react';
 import React from 'react';
@@ -19,8 +18,10 @@ function DropdownMenu({ children, title }) {
       modifiers={[
         {
           name: 'arrow',
+          enabled: true,
           options: {
             element: '[data-popper-arrow]',
+            padding: 10,
           },
         },
       ]}
@@ -42,9 +43,9 @@ function DropdownMenu({ children, title }) {
       >
         {title}
       </MenuButton>
-      <div id='popper'>
+      {/* <div id='popper'>
         <div data-popper-arrow></div>
-      </div>
+      </div> */}
       <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
         {children}
       </MenuList>

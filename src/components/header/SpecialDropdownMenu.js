@@ -20,10 +20,10 @@ import CarBrands from '../../data/brand.json';
 
 function Column({ data }) {
   return (
-    <Flex className='firstColumn' flexWrap='wrap' flexDir='column' gap={4}>
+    <Flex className='firstColumn' flexWrap='wrap' flexDir='column' gap={2}>
       {data.map((item) => {
         return (
-          <Link key={item.id} paddingX={3} _hover={{ textDecor: 'none' }}>
+          <Link key={item.id} pl={3} py={1} _hover={{ textDecor: 'none' }}>
             {item.type}
           </Link>
         );
@@ -36,7 +36,7 @@ function SpecialDropdownMenu() {
   return (
     <Popover
       trigger='hover'
-      closeDelay={100}
+      closeDelay={0}
       openDelay={0}
       gutter={0}
       matchWidth={false}
@@ -67,8 +67,8 @@ function SpecialDropdownMenu() {
             <ChevronRightIcon color='blue.500' fontSize='lg' ml={1} />
           </Link>
         </PopoverHeader>
-        <PopoverArrow />
-        <PopoverBody display='flex' gap={10} padding={1}>
+        {/* <PopoverArrow /> */}
+        <PopoverBody display='flex' padding={1}>
           <Column data={CarBrands.slice(0, 11)} />
           <Column data={CarBrands.slice(11, 22)} />
         </PopoverBody>
