@@ -75,3 +75,13 @@ body {
 .swiper-button-next::after {
   display: none;
 }
+
+.swiper-pagination-bullet-active {
+  background-color: #fdcf37;
+  border-radius: 5px;
+  width: 20px;
+}
+
+.heroCarouselSwiper {
+  height: 500px;
+}

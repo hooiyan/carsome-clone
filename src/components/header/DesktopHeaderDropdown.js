@@ -46,7 +46,7 @@ function DesktopHeaderDropdown({ children, title }) {
       {/* <div id='popper'>
         <div data-popper-arrow></div>
       </div> */}
-      <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
+      <MenuList onMouseEnter={onOpen} onMouseLeave={onClose} zIndex={9999}>
         {children}
       </MenuList>
     </Menu>
